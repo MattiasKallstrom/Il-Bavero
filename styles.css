@@ -1,0 +1,343 @@
+@font-face {
+    font-family: "ThisFont";
+    src: url("..//Kod/Vogue_.ttf");
+}
+* {
+    font-family: "ThisFont";
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/*MOBILE*/
+@media only screen and (min-width:0px) and (max-width:900px) {
+    header{display:none;}
+}
+@media only screen and (min-width:900px) {
+    .hamburger {display:none;}
+}
+.menu {
+    width: 100%;
+    position: fixed;
+    margin-top: -240px;
+    background: rgb(43, 41, 41);
+    padding: 15px;
+    transition: 0.5s;
+    z-index: 999;
+}
+input[type=checkbox] {
+    position: fixed;
+    right: -9999px;
+    opacity: 0;
+}
+.nav-toggle {
+    padding: 10px;
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 99;
+    margin-left:10px;
+    transition: .5s;
+}
+.nav-toggle span {
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 40px;
+    background: rgb(255, 255, 255);
+    transition: all .5s;
+}
+.nav-toggle span:nth-child(2) {top: 12px;}
+.nav-toggle span:nth-child(3) {top: 24px;}
+
+
+input[type=checkbox]:checked ~ .nav-toggle {
+  margin-top: 230px;
+}
+
+input[type=checkbox]:checked ~ .nav-toggle span:nth-child(1) {
+    top: 28px;
+    left: 10px;
+    height: 4px;
+    width: 40px;
+    transform: rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ .nav-toggle span:nth-child(2) {
+  transform: rotate(90deg);
+  left:-10px;
+  top: 24px;
+  height: 4px;
+  width: 40px;
+}
+
+input[type=checkbox]:checked ~ .nav-toggle span:nth-child(3) {
+    width: 40px;
+    top: 20.1px;
+    height: 4px;
+    transform: rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ .menu {
+    margin-left: 0px;
+    margin-top: -20px;
+}
+
+input[type=checkbox]:checked ~ .parallax {
+    margin-top: 200px;
+}
+
+header {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 24px;
+    width: 110%;
+    position: absolute;
+    top: 0;
+    height: 100px;    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 12px 12px;
+    text-decoration: none;
+}
+li .dropdown:hover .dropdown-items:hover {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-items {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    border: 3px solid rgb(2, 1, 1);
+    border-radius: 3px;
+    text-align: left;
+}
+.dropdown:hover .dropdown-items {
+    display: block;
+}
+li a:hover, .dropdown:hover{
+    color: rgb(173, 173, 173);
+}
+li.dropdown {
+    display: inline-block;
+}
+.parallax1 {
+    background-image: linear-gradient(500deg, rgb(146, 106, 146) 0%, rgba(59, 37, 70, 0.746) 10%, rgba(61, 25, 53, 0.351) 100%, rgba(255,0,0,1) 100%), url("..//Kod/images/background.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    padding: 0px;
+    display: block;
+}
+.parallax2 {
+    background-image: linear-gradient(500deg, rgb(146, 106, 146) 0%, rgba(59, 37, 70, 0.746) 10%, rgba(61, 25, 53, 0.351) 100%, rgba(255,0,0,1) 100%), url("..//Kod/images/background.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    padding: 0px;
+    display: block;
+}
+.parallax {
+    background-image: linear-gradient(500deg, rgb(146, 106, 146) 0%, rgba(59, 37, 70, 0.746) 10%, rgba(61, 25, 53, 0.351) 100%, rgba(255,0,0,1) 100%), url("..//Kod/images/background.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    padding: 0px;
+    display: block;
+}
+.logo {
+    width: 110%;
+    position: relative;
+    text-align: center;
+}
+.frontpage_logo {
+    width: 50%;
+    padding: 50px 25px 25px 25px;
+    max-width: 600px;
+}
+.contact_button {
+    padding: 10px;
+    position: absolute;
+    right: 50%;
+    top: 80%;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #ffffff;
+    font-size: 24px;
+    border: solid 2px #244c66;
+}
+.contact_button:hover {
+    border: solid 1px rgb(209, 204, 204);
+    background-color: rgb(206, 203, 203);
+    color: black;
+    transition: 1s;
+}
+ul { 
+  list-style: none;
+}
+h1 {
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+}
+h2, p, h4{
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    width: 50%;
+    color: white;
+}
+.about {
+    width:110%;
+    background-image: linear-gradient(200deg, rgb(172, 171, 172) 1%, rgb(141, 141, 141) 10%, rgba(126, 57, 111, 0.351) 80%, rgb(138, 138, 138) 100%), url(..//Kod/images/about_background.png);
+    background-position: right;
+    background-repeat: repeat-y;
+    min-height:300px;
+    padding: 40px 100px 40px 0px;
+    background-color: rgb(212, 211, 211);
+    text-align: left;
+}
+.about h1{
+    margin: auto;
+    width: 60%;
+    color: rgb(17, 17, 17);
+}
+.about_text {
+    font-size: 24px;
+    margin: auto;
+    width: 50%;
+    color: rgb(0, 0, 0);
+}
+.products {
+    width: 100%;
+    background-color: rgba(15, 12, 12, 0.904);
+    background: linear-gradient(150deg, rgb(48, 42, 48) 10%, rgba(48, 44, 44, 0.746) 100%, rgba(0, 0, 0, 0.351) 10%, rgb(0, 0, 0) 100%);
+    min-height: 400px;
+    margin: auto;
+    padding: 20px 0px 0px 0px;
+    text-align: left;
+}
+.products-text {
+    position: relative;
+    font-size: 24px;
+    margin: auto;
+    width: 50%;
+    color: rgba(15, 12, 12, 0.904);
+}
+.gallery {
+    text-align: center;
+    position: relative;
+
+}
+.gallery img {
+    height: 200px;
+    transition: 1s;
+    padding: 10px;
+    width: 250px;
+}
+.gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.2);
+}
+.h2_contact {
+    text-align: center;
+}
+.contact {
+    margin: auto;
+    width:100%;
+    background-image: url(..//Kod/images/contact_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact_form {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+.contact_form a {
+    color: rgb(255, 255, 255);
+    padding: 17px;
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid rgb(197, 186, 186);
+    border-radius: 3px;
+}
+.form {
+    text-align: center;
+    font-size: 19px;
+    margin: auto;
+    color: white;
+    width: 50%;
+    padding: 15px;
+}
+.form input[type="text"] {
+    width: 75%;
+    height: 20px;
+}
+.form input[type="submit"] {
+    padding: 10px;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #000000;
+    font-size: 24px;
+    border: solid 2px #244c66;
+    cursor: pointer;
+}
+.form input[type="submit"]:hover {
+    border: solid 1px rgb(209, 204, 204);
+    background-color: rgb(206, 203, 203);
+    color: black;
+    transition: 1s;
+}
+#comment{
+    height: 100px;
+    width: 75%;
+}
+footer {
+    background: rgb(241, 241, 241);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
